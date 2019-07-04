@@ -33,6 +33,7 @@ public class LogAdapter implements EventHandler {
 				pattern = pattern.replaceFirst("%serviceName", "" + model.serviceName);
 				pattern = pattern.replaceFirst("%message", "" + messageFormat);
 				pattern = pattern.replaceFirst("%detailMessage", "" + model.detailMessage);
+				pattern = pattern.replaceFirst("%customMessage", "" + model.getCustomMessage());
 
 				Logger.info(pattern);
 			}
